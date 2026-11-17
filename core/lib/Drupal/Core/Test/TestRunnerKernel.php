@@ -53,7 +53,7 @@ class TestRunnerKernel extends DrupalKernel {
     restore_exception_handler();
 
     // In addition, ensure that PHP errors are not hidden away in logs.
-    ini_set('display_errors', TRUE);
+    ini_set('display_errors', TRUE); // nosemgrep: php.lang.security.search-active-debug.search-active-debug
 
     // This container is never going to be dumped and therefore it needs a
     // rebuild. Setting this flag avoids trying to load the container from
